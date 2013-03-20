@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EspacioInfinitoDotNet", "EspacioInfinitoDotNet\EspacioInfinitoDotNet.csproj", "{61D39594-F835-4BB7-BD0B-8F8C9CD9B8E7}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Instalador", "Instalador\Instalador.vdproj", "{A7A34D53-A5B4-4ECF-8FAF-9CB4A787A1F4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{61D39594-F835-4BB7-BD0B-8F8C9CD9B8E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61D39594-F835-4BB7-BD0B-8F8C9CD9B8E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61D39594-F835-4BB7-BD0B-8F8C9CD9B8E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61D39594-F835-4BB7-BD0B-8F8C9CD9B8E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7A34D53-A5B4-4ECF-8FAF-9CB4A787A1F4}.Debug|Any CPU.ActiveCfg = Debug
+		{A7A34D53-A5B4-4ECF-8FAF-9CB4A787A1F4}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

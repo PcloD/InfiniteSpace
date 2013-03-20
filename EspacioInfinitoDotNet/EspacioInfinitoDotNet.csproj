@@ -1,0 +1,174 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{61D39594-F835-4BB7-BD0B-8F8C9CD9B8E7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EspacioInfinitoDotNet</RootNamespace>
+    <AssemblyName>EspacioInfinitoDotNet</AssemblyName>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>EspacioInfinitoKey.snk</AssemblyOriginatorKeyFile>
+    <TargetZone>LocalIntranet</TargetZone>
+    <GenerateManifests>false</GenerateManifests>
+    <ApplicationIcon>Resources\IconoAplicacion.ico</ApplicationIcon>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationVersion>1.0.2.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Juego\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRules>-Microsoft.Globalization#CA1301;-Microsoft.Globalization#CA1302;-Microsoft.Globalization#CA1303;-Microsoft.Globalization#CA1306;-Microsoft.Globalization#CA1304;-Microsoft.Globalization#CA1305;-Microsoft.Globalization#CA1300;-Microsoft.Interoperability#CA1403;-Microsoft.Interoperability#CA1406;-Microsoft.Interoperability#CA1413;-Microsoft.Interoperability#CA1402;-Microsoft.Interoperability#CA1407;-Microsoft.Interoperability#CA1404;-Microsoft.Interoperability#CA1410;-Microsoft.Interoperability#CA1411;-Microsoft.Interoperability#CA1405;-Microsoft.Interoperability#CA1409;-Microsoft.Interoperability#CA1415;-Microsoft.Interoperability#CA1408;-Microsoft.Interoperability#CA1414;-Microsoft.Interoperability#CA1412;-Microsoft.Interoperability#CA1400;-Microsoft.Interoperability#CA1401;-Microsoft.Mobility#CA1600;-Microsoft.Mobility#CA1601;-Microsoft.Portability#CA1901;-Microsoft.Portability#CA1900;-Microsoft.Security#CA2116;-Microsoft.Security#CA2117;-Microsoft.Security#CA2105;-Microsoft.Security#CA2115;-Microsoft.Security#CA2104;-Microsoft.Security#CA2122;-Microsoft.Security#CA2114;-Microsoft.Security#CA2123;-Microsoft.Security#CA2111;-Microsoft.Security#CA2108;-Microsoft.Security#CA2107;-Microsoft.Security#CA2103;-Microsoft.Security#CA2100;-Microsoft.Security#CA2118;-Microsoft.Security#CA2109;-Microsoft.Security#CA2119;-Microsoft.Security#CA2106;-Microsoft.Security#CA2112;-Microsoft.Security#CA2110;-Microsoft.Security#CA2120;-Microsoft.Security#CA2101;-Microsoft.Security#CA2121;-Microsoft.Security#CA2126;-Microsoft.Security#CA2124</CodeAnalysisRules>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Juego\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tao.FreeGlut, Version=2.4.0.1, Culture=neutral, PublicKeyToken=6e602a6ad6c0d06d, processorArchitecture=MSIL" />
+    <Reference Include="Tao.OpenGl, Version=2.1.0.4, Culture=neutral, PublicKeyToken=1ca010269a4501ef, processorArchitecture=MSIL" />
+    <Reference Include="Tao.Sdl, Version=1.2.11.1, Culture=neutral, PublicKeyToken=9c7a200e36c0094e, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\NombresTexturas.cs" />
+    <Compile Include="Game\DialogoTextoConBotones.cs" />
+    <Compile Include="Game\DialogoConfiguracion.cs" />
+    <Compile Include="Game\DialogoPrueba.cs" />
+    <Compile Include="Game\DialogoIntroduccion.cs" />
+    <Compile Include="Game\DialogoAyuda.cs" />
+    <Compile Include="Game\DialogoReiniciar.cs" />
+    <Compile Include="Game\DialogoSalir.cs" />
+    <Compile Include="Game\DialogoMenuPrincipal.cs" />
+    <Compile Include="Game\GameEngine.cs" />
+    <Compile Include="Graphics\Frustum.cs" />
+    <Compile Include="Graphics\GraphicEngine.cs" />
+    <Compile Include="Graphics\Textura.cs" />
+    <Compile Include="Graphics\TexturaManager.cs" />
+    <Compile Include="GUI\Controls\GUINumeric.cs" />
+    <Compile Include="GUI\Controls\GUICheckbox.cs" />
+    <Compile Include="GUI\Controls\GUIHorizontalComboBox.cs" />
+    <Compile Include="GUI\Controls\GUIDialog.cs" />
+    <Compile Include="GUI\Controls\GUIRoot.cs" />
+    <Compile Include="GUI\Controls\GUIStatic.cs" />
+    <Compile Include="GUI\Controls\GUIButton.cs" />
+    <Compile Include="GUI\Controls\GUITextBox.cs" />
+    <Compile Include="GUI\GUIEngine.cs" />
+    <Compile Include="GUI\GUIEvent.cs" />
+    <Compile Include="GUI\GUIGraphicEngine.cs" />
+    <Compile Include="GUI\GUIWindow.cs" />
+    <Compile Include="GUI\Controls\GUIMapa.cs" />
+    <Compile Include="Maths\Vector2.cs" />
+    <Compile Include="Recursos\RecursoRenovableEnSector.cs" />
+    <Compile Include="Recursos\RecursoRenovableEnThing.cs" />
+    <Compile Include="Recursos\ITieneRecursos.cs" />
+    <Compile Include="Recursos\RecursoRenovable.cs" />
+    <Compile Include="Recursos\Recurso.cs" />
+    <Compile Include="Things\BoundingCircle.cs" />
+    <Compile Include="Things\BoundingObject.cs" />
+    <Compile Include="Things\BoundingRectangle.cs" />
+    <Compile Include="Things\BoundingTriangle.cs" />
+    <Compile Include="Things\NPC\Estados\EstadoNPC.cs" />
+    <Compile Include="Things\NPC\Estados\EstadoNPCAtacar.cs" />
+    <Compile Include="Things\NPC\Estados\EstadoNPCHuir.cs" />
+    <Compile Include="Things\NPC\Estados\EstadoNPCNavegarA.cs" />
+    <Compile Include="Things\NPC\Estados\EstadoNPCPlanificar.cs" />
+    <Compile Include="Things\NPC\Estados\EstadoNPCRecolectar.cs" />
+    <Compile Include="Things\NPC\ThingNaveNPC.cs" />
+    <Compile Include="Things\ThingOndaExpansiva.cs" />
+    <Compile Include="Things\ThingEstacionEspacial.cs" />
+    <Compile Include="Things\ThingPlaneta.cs" />
+    <Compile Include="Things\ThingDaniable.cs" />
+    <Compile Include="Things\ThingAgujeroDeGusano.cs" />
+    <Compile Include="Things\ThingEstrella.cs" />
+    <Compile Include="Things\ThingAgujeroNegro.cs" />
+    <Compile Include="Things\ThingLaser.cs" />
+    <Compile Include="Things\ThingNaveJugador.cs" />
+    <Compile Include="Things\ThingRedondo.cs" />
+    <Compile Include="Things\ThingResto.cs" />
+    <Compile Include="Universes\Faccion.cs" />
+    <Compile Include="Universes\Generadores\GeneradorDemo.cs" />
+    <Compile Include="Universes\Generadores\GeneradorTest.cs" />
+    <Compile Include="Universes\Generadores\Generador.cs" />
+    <Compile Include="Universes\Generadores\GeneradorAleatorio.cs" />
+    <Compile Include="Universes\Sector.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="EspacioInfinitoKey.snk" />
+    <BaseApplicationManifest Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Things\Thing.cs" />
+    <Compile Include="Things\ThingNave.cs" />
+    <Compile Include="Universes\Galaxia.cs" />
+    <Compile Include="Universes\SectorID.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconoAplicacion.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Uninstall.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
