@@ -6,3 +6,7 @@ Small game / demo made in C# using Visual Studio 2005 used to test some procedur
 It uses the Tao library for rendering (OpenGL bindings)
 
 Most of the source code is in spanish, sorry!
+
+Screenshot:
+
+![Screenshot](Screenshots/ss1.png)
